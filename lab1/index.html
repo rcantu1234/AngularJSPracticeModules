@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My Angular App</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body ng-controller="homeController as vm">
+    <!-- <label>Message : </label>
+    <input ng-model="message" type="text" name="name" value="">
+    <h1>{{message}}</h1>
+
+    <h1>{{vm.message}}</h1>
+
+    <ul>
+      <li ng-repeat="friend in vm.friends">{{friend}}</li>
+    </ul> -->
+
+    <table class="table table-striped table-bordered">
+      <tr>
+        <th>
+          Year
+        </th>
+        <th>
+          make
+        </th>
+        <th>
+          Model
+        </th>
+      </tr>
+      <tr ng-repeat="car in vm.cars">
+        <td>
+          {{car.year}}
+        </td>
+        <td>
+          {{car.make}}
+        </td>
+        <td>
+          {{car.model}}
+        </td>
+      </tr>
+    </table>
+
+    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
