@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Modules and Controllers</title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+    <div ng-controller="HomeController as controller">
+      {{controller.message}}
+    </div>
+
+    <div>
+      40 + 50 = {{40 + 50}}
+    </div>
+
+
+<script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+<script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+<script src="app.js" charset="utf-8"></script>
+
+  </body>
+</html>

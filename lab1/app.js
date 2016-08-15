@@ -1,17 +1,21 @@
 var MyApp;
 (function (MyApp) {
     angular.module("MyApp", []);
-    var HomeController = (function () {
-        function HomeController() {
-            this.cars = [
-                { year: 1989, make: "VM", model: "Fox" },
-                { year: 1988, make: "Nissan", model: "Sentra" },
-                { year: 1996, make: "Ford", model: "Explorer" },
-                { year: 2009, make: "BMW", model: "i325" },
-                { year: 2016, make: "Tesla", model: "Model S" },
+    var StoreController = (function () {
+        function StoreController() {
+            this.pets = [
+                { name: "Brian", species: "Dog", breed: "Beagle", temperament: "Calm", index: 0 },
+                { name: "Lassie", species: "Dog", breed: "Collie", temperament: "Rough", index: 1 },
+                { name: "Princess", species: "Rodent", breed: "Hamster", temperament: "Nice", index: 2 },
+                { name: "Hamtaro", species: "Rodent", breed: "Hamster", temperament: "Playful", index: 3 },
+                { name: "Morris", species: "Cat", breed: "Siamese", temperament: "Lazy", index: 4 },
             ];
         }
-        return HomeController;
+        StoreController.prototype.buy = function () {
+            this.pets.pop();
+        };
+        return StoreController;
     }());
-    angular.module("MyApp").controller("homeController", HomeController);
+    MyApp.StoreController = StoreController;
+    angular.module("MyApp").controller("storeController", StoreController);
 })(MyApp || (MyApp = {}));

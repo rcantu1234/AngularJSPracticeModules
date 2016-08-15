@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Services and Dependency Injection</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body ng-controller="productsController as pc">
+
+    <h1>{{pc.product.name + " " + pc.product.price}}</h1>
+    <h1>Total : {{pc.product.tax}}</h1>
+
+
+    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

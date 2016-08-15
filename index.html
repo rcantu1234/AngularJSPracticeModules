@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app='filterApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Filter Example</title>
+  </head>
+  <body ng-controller='homeController as vm'>
+    <br>
+    <table border="1">
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          Quality
+        </th>
+      </tr>
+      <tr ng-repeat="item in vm.items">
+        <td>
+          {{item.name}}
+        </td>
+        <td>
+          {{item.price}}
+        </td>
+        <td>
+          {{item.quality}}
+        </td>
+      </tr>
+    </table>
+    <br>
+
+    <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
